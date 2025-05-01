@@ -98,10 +98,12 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["hwrustdesk.lxjl.love"];
+pub const RENDEZVOUS_SERVERS: &[&str] = &["hwrd.bemyai.xyz"];
+pub const API_SERVERS: &[&str] = &["hwrd.bemyai.xyz"];
 pub const RS_PUB_KEY: &str = "Lixi40233251";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
+pub const API_PORT: i32 = 21114;
 pub const RELAY_PORT: i32 = 21117;
 
 macro_rules! serde_field_string {
