@@ -57,8 +57,11 @@ pub use toml;
 pub use uuid;
 pub mod fingerprint;
 pub use flexi_logger;
+pub mod websocket;
+pub mod stream;
+pub use stream::Stream;
+pub use whoami;
 
-pub type Stream = tcp::FramedStream;
 pub type SessionID = uuid::Uuid;
 
 #[inline]
@@ -240,7 +243,7 @@ where
 }
 
 pub fn is_valid_custom_id(id: &str) -> bool {
-    regex::Regex::new(r"^[a-zA-Z]\w{5,15}$")
+    regex::Regex::new(r"^[a-zA-Z][\w-]{5,15}$")
         .unwrap()
         .is_match(id)
 }
